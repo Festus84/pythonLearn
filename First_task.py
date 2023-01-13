@@ -1,7 +1,8 @@
 from selenium import webdriver
 from selenium.webdriver.chrome.service import Service
-from selenium.webdriver.common.by import By
 from webdriver_manager.chrome import ChromeDriverManager
+from selenium.webdriver.common.by import By
+
 import time
 
 driver = webdriver.Chrome(service=Service(ChromeDriverManager().install()))
@@ -16,12 +17,13 @@ driver.find_element(By.ID, "login-button").click()
 act_title = driver.title
 exp_title = "Swag Labs"
 
+# Verifying title page
 if act_title == exp_title:
     print("Login Test Passed")
 else:
     print("Login Test Failed")
 
 time.sleep(5)
-driver.close()
+# driver.close()
 driver.quit()
 print("Test Completed")
