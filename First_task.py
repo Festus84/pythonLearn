@@ -70,6 +70,5 @@ else:
 
 time.sleep(5)
 # Closing the browser
-# driver.close()
 driver.quit()
 print("Test Completed")
